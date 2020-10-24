@@ -62,7 +62,6 @@
 #define X_MAX_PIN                             24
 #define Y_MIN_PIN                             11
 #define Y_MAX_PIN                             23
-#define Z_MIN_PIN                             10
 #define Z_MAX_PIN                             30
 
 //
@@ -73,11 +72,13 @@
 #endif
 
 #ifndef FIL_RUNOUT_PIN
-  #define FIL_RUNOUT_PIN                       10
+  #define FIL_RUNOUT_PIN                      10
 #endif
 
 #if ENABLED(BLTOUCH)
-	#define Z_MIN_PIN          22
+	#define Z_MIN_PIN                           22
+#else
+  #define Z_MIN_PIN                           10
 #endif
 
 #if ENABLED(FIX_MOUNTED_PROBE)
